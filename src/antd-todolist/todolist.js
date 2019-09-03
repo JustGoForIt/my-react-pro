@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import TodoListUI from './todolistUI2'
 import 'antd/dist/antd.css'
 import axios from 'axios'
-import { getInputChangeAction, getAddItemAction, getDeleteItemAction, getTodoList } from './../store/actionCreators'
+import { getInputChangeAction, getAddItemAction, getDeleteItemAction, getTodoList, initListAction } from './../store/actionCreators'
 import store from './../store'
 
 class Todolist extends Component {
@@ -25,13 +25,18 @@ class Todolist extends Component {
       handleItemDelete={this.handleItemDelete} />)
   }
   componentDidMount () {
+  	debugger
   	// axios.get('./todolist').then((resp) => {
   	// 	const data = resp.data
   	// 	const action = initListAction(data)
   	// }, () => {
 
   	// })
-  	var action = getTodoList()
+  	// redux-thunk
+  	// var action = getTodoList()
+    //  store.dispatch(action)
+    // redux-saga
+    const action = getTodoList()
     store.dispatch(action)
   }
   handleInputChange (e) {
