@@ -1,13 +1,19 @@
 import React, { Component } from 'react'
-import './style.css'
+import Header from './common/header'
+import GloablStled from './style'
 
 class App extends Component {
   constructor (props) {
     super(props)
   }
+
   render () {
-  	  return (
-      <div className='red'>fadfasf</div>)
+ 		return (
+      <div>
+     <GloablStled />
+     <Header />
+   </div>
+    )
   }
 }
 

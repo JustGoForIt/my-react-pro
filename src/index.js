@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-
-import NewApp from './jianshu/NewApp'
+import App from './jianshu/App'
 // import store from './react-redux/store'
 // import { Provider } from 'react-redux'
 // const 	jianshu = (
@@ -10,4 +9,4 @@ import NewApp from './jianshu/NewApp'
 //   </Provider>
 // )
 
-ReactDOM.render(<NewApp />, document.getElementById('root'))
+ReactDOM.render(<App />, document.getElementById('root'))
