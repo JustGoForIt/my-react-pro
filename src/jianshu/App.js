@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Header from './common/header'
-import GloablStled from './style'
+import Globalstyled from './style'
+import Globalicon from './iconfont/iconfont'
 
 class App extends Component {
   constructor (props) {
@@ -10,7 +11,8 @@ class App extends Component {
   render () {
  		return (
       <div>
-     <GloablStled />
+     <Globalstyled />
+     <Globalicon />
      <Header />
    </div>
     )

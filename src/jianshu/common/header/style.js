@@ -21,18 +21,20 @@ export const Nav = styled.div`
   width:960px;
   margin:0 auto;
   height:100%;
+  padding-right:70px;
+  box-sizing:border-box;
 
 `
 export const NavItem = styled.div`
   &.left{
-  	float:left;
+    float:left;
   }
   &.right{
-  	float:right;
-  	color:#969696;
+    float:right;
+    color:#969696;
   }
   &.active{
-  	color:#ea6f5a;
+    color:#ea6f5a;
   }
 
   line-height:56px;
@@ -51,12 +53,75 @@ export const NavSearch = styled.input.attrs({
   border-radius:19px;
   background:green;
   margin-top:9px;
-  padding:0 20px;
+  padding:0 30px 0 20px;
   box-sizing:border-box;
   background:#eee;
   font-size:14px;
   margin-left:12px;
+  color:#666;
   &::placeholder{
-  	color:#999;
+    color:#999;
   }
+  &.focused{
+    width:240px;
+  }
+  &.slide-enter{
+    transition:all .2s ease-in;
+  }
+  &.slide-enter-active{
+    width:240px;
+  }
+  &.slide-exit{
+    transition:all .2s ease-in;
+  }
+  &.slide-exit-active{
+    width:160px;
+  }
+`
+
+export const Addition = styled.div`
+  position:absolute;
+  right:0;
+  top:0;
+  height:56px;
+`
+
+export const Button = styled.div`
+  float:right;
+  margin-top:9px;
+  line-height:38px;
+  border-radius:19px;
+  border:1px solid #ec6149;
+  margin-right:20px;
+  padding:0 20px;
+  font-size:14px;
+  &.reg{
+    color:#ec6149;
+  }
+  &.writting{
+    color:#fff;
+    background:#ec6149;
+  }
+`
+
+export const SearchWrapper = styled.div`
+    float: left;
+    position: relative;
+
+    .iconfont{
+      position:absolute;
+      right:5px;
+      bottom:5px;
+      width: 30px;
+      height: 30px;
+      border-radius: 15px;
+      line-height: 30px;
+      text-align: center;
+      &.focused{
+        background:#777;
+        color:#fff;
+      }
+    }
+
+
 `
